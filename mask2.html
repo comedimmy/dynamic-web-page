@@ -1,0 +1,56 @@
+<img class="masked"id="masked" src="image1.jpg" alt="masked">
+<img class="masked-1"id="masked-1" src="image2.jpg" alt="masked-1">
+<style>
+	.masked {
+		width: 500px;
+		height: 500px;
+		mask-image: url('{{url_for('static',filename='images/mask-1.png')}}');
+		/* 使用 mask-1.png 作為遮罩圖形 */
+		
+		mask-size: cover;
+		/* 遮罩圖形覆蓋整張圖片 */
+		
+		animation: rotate 5s linear infinite;
+		/* 執行旋轉動畫，5 秒轉一圈，持續無限 */
+	}
+	.masked-1 {
+		width: 500px;
+		height: 500px;
+		
+		mask: linear-gradient(135deg, transparent var(--p1), #fff 0) top left;
+		/* 使用線性漸層遮罩，根據 --p1 改變透明起始位置 */
+		
+		mask-size: 80% 80%;
+		/* 遮罩大小為圖片的 80% */
+		
+		mask-repeat: no-repeat;
+		/* 遮罩只使用一次，不重複 */
+		
+		transform: rotate(180deg);
+		/* 讓圖片本身先旋轉 180 度（上下顛倒） */
+		
+		animation: 1s linear infinite a2;
+		/* 套用 a2 遮罩變化動畫，每秒變化一次，無限循環 */
+	}
+	@property --p1 {
+		syntax: "<length>";           /* 宣告變數的資料型態是長度值（如 px） */
+		inherits: true;               /* 可以被繼承 */
+		initial-value: 40px;          /* 初始值為 40px */
+		}
+		@keyframes a2 {
+		0% {
+			--p1: 20px;
+		}
+		100% {
+			--p1: 80px;
+		}
+	}
+	
+	
+	@keyframes rotate {
+		100% {
+			transform: rotate(1turn);  /* 360 度旋轉 */
+		}
+	}
+	
+</style>
