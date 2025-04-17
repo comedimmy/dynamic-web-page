@@ -1,0 +1,21 @@
+<div class="notching"> </div>
+
+<style>
+.notching {
+  width: 200px;                                 /* 區塊寬度為 200px */
+  height: 120px;                                /* 區塊高度為 120px */
+  background:                                   
+    linear-gradient(135deg, transparent 15px, lightblue 20px) top left,  
+    /* 第一個角：從左上角開始，以 135 度角線性漸變，前 15px 為透明，之後變成淡藍色 */
+    
+    linear-gradient(-135deg, transparent 10px, orange 15px) top right;
+    /* 第二個角：從右上角開始，以 -135 度角線性漸變，前 10px 為透明，之後變成橘色 */
+
+  background-size: 30% 30%, 40% 40%;
+  /* 第一個角漸層圖案佔元素的 30% 大小，第二個角佔 40% 大小 */
+
+  background-repeat: no-repeat;
+  /* 不重複圖案，確保只在指定角落顯示一次 */
+}
+
+</style>

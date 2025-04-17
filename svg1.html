@@ -1,0 +1,84 @@
+<!-- HTML 程式碼-->
+<div class="a">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="m22 21l116.5 116.5z"/></svg>
+  <div></div>
+</div>
+<div class="b">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="M150,50 A100,100 0 1,1 149.9,50Z"/></svg>
+  <div class="circle"></div>
+</div>
+<div class="c">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="M20,20 C20,150 200,-100 200,50"/></svg>
+  <div class ="wave"></div>
+</div>
+<div class="d">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="m22 21l116.5 116.5z"/></svg>
+  <div></div>
+</div>
+<div class="e">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="m22 21l116.5 116.5z"/></svg>
+  <div></div>
+</div>
+
+<!-- CSS 程式碼 -->
+<style>
+  div {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 10px -100px 10px 10px;
+  }
+div div {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  float: none;
+  offset-path: path("m22 21l116.5 116.5z");  /* 元素沿著這段直線路徑運動 */
+  border-width: 50px 30px 50px 30px;         /* 製造箭頭效果的邊框樣式 */
+  border-color: #ff00ff #0000ff #f00f #00ff; /* 四邊不同顏色 */
+  border-style: solid;
+  animation: oxxo 2s infinite linear;        /* 沿著 offset 路徑跑動畫 */
+}
+
+    .b .circle {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    float: none;
+    offset-path: path("M150,50 A100,100 0 1,1 149.9,50Z"); /* 圓形軌道動畫 */
+    border-width: 20px 50px 50px 50px;
+    border-color: #0f0f #f00fff #f00f #00ff;
+    border-style: solid;
+	animation: oxxo 2s infinite linear
+  }
+    .c .wave {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    float: none;
+    offset-path: path("M20,20 C20,150 200,-100 200,50");  /* 波浪狀路徑 */
+    border-width: 30px 30px 30px 30px;
+    border-color: #f0f0 #fff0 #f00f #00ff;
+    border-style: solid;
+	animation: move 2s infinite alternate ease-in-out;    /* 往返運動，速度變化 */
+  }
+	.a div {offset-rotate: auto;}              /* 自動依路徑方向旋轉箭頭 */
+	.b div {offset-rotate: 45deg;}             /* 固定 45 度旋轉 */
+	.c div {offset-rotate: auto 45deg;}        /* 自動旋轉 + 額外偏移 45 度 */
+	.d div {offset-rotate: reverse 45deg;}     /* 反方向旋轉並偏轉 45 度 */
+	@keyframes oxxo{
+		0% {offset-distance:0%;}
+		100% {offset-distance:100%;}
+	}
+	@keyframes move {
+		0% {offset-distance: 0%;}
+		100% {offset-distance: 100%;}
+	}
+</style>
