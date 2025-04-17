@@ -1,0 +1,109 @@
+<div>11</div>
+<div>12</div>
+<div>35</div>
+<div>42</div>
+
+<!-- CSS 程式碼 -->
+<style>
+	div {
+		position: absolute;            /* 絕對定位，讓每個 div 可以單獨控制位置 */
+		top: 50px;                     /* 初始 Y 座標位置 */
+		left: 250px;                   /* 初始 X 座標位置 */
+		font-size: 30px;               /* 字體大小 */
+		box-sizing: border-box;       /* 邊框與 padding 都包含在 width/height 內 */
+		background: #c00;             /* 初始背景顏色為紅色 */
+	}
+		div:nth-of-type(1) {
+		padding: 27px 0 0 7px;                      /* 內距設定，讓文字不被遮到 */
+		width: 50px;
+		height: 100px;
+		clip-path: polygon(0% 0%, 0% 100%, 100% 50%); /* 裁切為向右的三角形 */
+		animation: a 4s infinite alternate;         /* 套用 a 動畫，來回執行，持續 4 秒 */
+	}
+		div:nth-of-type(2) {
+		padding: 0 0 0 40px;
+		width: 100px;
+		height: 50px;
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%); /* 裁切為向下三角形 */
+		animation: b 4s infinite alternate;           /* 套用 b 動畫 */
+	}
+		div:nth-of-type(3) {
+		padding: 27px 0 0 22px;
+		left: 300px;
+		width: 50px;
+		height: 100px;
+		clip-path: polygon(0% 50%, 100% 0%, 100% 100%); /* 裁切為向左三角形 */
+		animation: c 4s infinite alternate;
+	}
+		div:nth-of-type(4) {
+		padding: 10px 0 0 40px;
+		top: 100px;
+		width: 100px;
+		height: 50px;
+		clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* 裁切為向上三角形 */
+		animation: d 4s infinite alternate;
+	}
+	@keyframes a {
+	90%, 100% {
+		padding: 27px 0 0 40px;
+		left: 100px;
+		width: 100px;
+		height: 87px;
+		background: #09f;                          /* 背景變藍色 */
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* 三角尖朝上 */
+	}
+	}
+	
+	@keyframes b {
+	90%, 100% {
+		padding: 27px 0 0 40px;
+		left: 200px;
+		width: 100px;
+		height: 87px;
+		background: #0a0;                          /* 背景變綠色 */
+		clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* 向上三角形 */
+	}
+	}
+	
+	@keyframes c {
+	90%, 100% {
+		left: 400px;
+		padding: 27px 0 0 40px;
+		width: 100px;
+		height: 87px;
+		background: #f09;                          /* 背景變紫紅色 */
+		clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+	}
+	80%, 60% {
+		padding: 27px 0 0 40px;
+		left: 400px;
+		width: 100px;
+		top: 0px;                                  /* 移動到上面 */
+		height: 87px;
+		background: #0a0;                          /* 背景變綠色 */
+		clip-path: polygon(0 0, 100% 0, 49% 100%);  /* 向下三角形 */
+	}
+	}
+	
+	@keyframes d {
+	90%, 100% {
+		left: 300px;
+		top: 50px;
+		padding: 27px 0 0 40px;
+		width: 100px;
+		height: 87px;
+		background: #f90;                          /* 背景變橘色 */
+		clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+	}
+	30%, 60% {
+		padding: 27px 0 0 40px;
+		left: 300px;
+		width: 100px;
+		buttom: 100px;                             
+		height: 87px;
+		background: #0a0;                          /* 背景變綠色 */
+		clip-path: polygon(0 0, 100% 0, 49% 100%);  /* 向下三角形 */
+	}
+	}
+
+</style>

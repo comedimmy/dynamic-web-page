@@ -1,0 +1,61 @@
+<div>
+  <div class = "a">11124235吳易軒</div>   <!-- 第一個 DIV，類別為 a，單純定位 -->
+  <div class = "b">11124235吳易軒</div>   <!-- 第二個 DIV，類別為 b，加上動態背景動畫 -->
+</div>
+
+
+<!-- CSS 程式碼 -->
+<style>
+	/* 定義第一個 CSS 自訂屬性 --p1，用來控制條紋的第一個位置 */
+	@property --p1 {
+	syntax: "<length>";       /* 指定該屬性是長度型別，例如 px、em */
+	inherits: true;           /* 可以被繼承 */
+	initial-value: 0px;       /* 初始值為 0px */
+	}
+	
+	/* 定義第二個自訂屬性 --p2，控制第二條分界線的位置 */
+	@property --p2 {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 20px;
+	}
+	
+	/* 定義第三個自訂屬性 --p3，控制第三條分界線的位置 */
+	@property --p3 {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 40px;
+	}
+	div {
+	width: 200px;             /* 每個 div 寬度 200px */
+	height: 200px;            /* 高度 200px */
+	border: 1px solid #00f;   /* 加上藍色邊框 */
+	}
+	div.a {
+	position: absolute;       /* 絕對定位，用於重疊效果 */
+	}
+	div.b {
+	position: absolute;       /* 同樣絕對定位，與 a 重疊 */
+	z-index: 2;               /* 層級比 a 高，蓋在上面 */
+	background-image: repeating-linear-gradient(
+		150deg,                /* 條紋的角度 150 度 */
+		#ff06 var(--p1),       /* 從 var(--p1) 開始是紅色 */
+		#ff06 var(--p2),       /* 到 var(--p2) 結束紅色 */
+		#00f var(--p2),        /* 接著從 var(--p2) 開始是藍色 */
+		#00f var(--p3));       /* 到 var(--p3) 結束藍色 */
+	animation: 1s linear infinite oxxo;  /* 執行動畫 oxxo，每秒重複一次，線性方式播放 */
+	}
+	
+	@keyframes oxxo {
+	0% {
+		--p1: 0px;              /* 起始時紅色條紋從 0px 開始 */
+		--p2: 30px;             /* 紅色持續到 30px，藍色從這裡開始 */
+		--p3: 60px;             /* 藍色持續到 60px 結束 */
+	}
+	100% {
+		--p1: 60px;             /* 結束時紅色條紋從 60px 開始 */
+		--p2: 90px;             /* 紅色持續到 90px，藍色從這裡開始 */
+		--p3: 120px;            /* 藍色持續到 120px 結束 */
+	}
+	}
+</style>
