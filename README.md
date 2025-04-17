@@ -6,6 +6,6 @@ dir
 
 look for **username**
 
-cd \ **username**
+cd \users\ **username**
 
 cd \docu*
