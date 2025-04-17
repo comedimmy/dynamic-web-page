@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  width: 300px;                             /* 寬度 300px */
+  height: 200px;                            /* 高度 200px */
+  background-color: lightblue;             /* 背景為淺藍色 */
+  border: 15px solid black;                /* 四邊黑色邊框，寬 15px */
+  border-block-style: solid;               /* 設定上下邊框樣式為實線（可略） */
+  border-block-width: 1px;                 /* 覆蓋上面設定：上下邊框寬變為 1px */
+  animation: mymove 5s infinite;           /* 執行名為 mymove 的動畫，每 5 秒循環一次 */
+}
+
+@keyframes mymove {
+  50% {
+    padding-inline-start: 40%;
+    text-shadow: 10px 20px 30px blue;/*旋轉 180 度
+
+padding-left 漸變至 40%
+
+文字出現藍色陰影
+
+上下邊框變粗
+
+下邊框顏色變成 lightblue*/
+    border-block-width: 25px;
+    border-bottom-color: lightblue;
+    transform: rotate(180deg);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h1>Animation of padding-inline-start</h1>
+
+<p>Gradually change the padding-inline-start from 0% to 40%, and back to 0%:<p>
+
+<div id="myDIV">
+11124235 吳易軒
+</div>
+
+</body>
+</html>
