@@ -1,5 +1,7 @@
 # dynamic-web-page
 
+npm install -g less
+
 cd \users
 
 dir
