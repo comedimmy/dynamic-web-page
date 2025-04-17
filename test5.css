@@ -1,0 +1,168 @@
+div {
+  position: relative;
+  width: 600px;
+  height: 499px;
+  background: url(image2.jpg) no-repeat;
+}
+div::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(image1.jpg);
+  animation: maskRotate 3.2s infinite alternate;
+}
+@keyframes maskRotate {
+  1% {
+    background-image: conic-gradient(transparent 1%, #a8efff, transparent 2%);
+  }
+  3% {
+    background-image: conic-gradient(transparent 3%, #a8efff, transparent 6%);
+  }
+  5% {
+    background-image: conic-gradient(transparent 5%, #a8efff, transparent 10%);
+  }
+  7% {
+    background-image: conic-gradient(transparent 7%, #a8efff, transparent 14%);
+  }
+  9% {
+    background-image: conic-gradient(transparent 9%, #a8efff, transparent 18%);
+  }
+  11% {
+    background-image: conic-gradient(transparent 11%, #a8efff, transparent 22%);
+  }
+  13% {
+    background-image: conic-gradient(transparent 13%, #a8efff, transparent 26%);
+  }
+  15% {
+    background-image: conic-gradient(transparent 15%, #a8efff, transparent 30%);
+  }
+  17% {
+    background-image: conic-gradient(transparent 17%, #a8efff, transparent 34%);
+  }
+  19% {
+    background-image: conic-gradient(transparent 19%, #a8efff, transparent 38%);
+  }
+  21% {
+    background-image: conic-gradient(transparent 21%, #a8efff, transparent 42%);
+  }
+  23% {
+    background-image: conic-gradient(transparent 23%, #a8efff, transparent 46%);
+  }
+  25% {
+    background-image: conic-gradient(transparent 25%, #a8efff, transparent 50%);
+  }
+  27% {
+    background-image: conic-gradient(transparent 27%, #a8efff, transparent 54%);
+  }
+  29% {
+    background-image: conic-gradient(transparent 29%, #a8efff, transparent 58%);
+  }
+  31% {
+    background-image: conic-gradient(transparent 31%, #a8efff, transparent 62%);
+  }
+  33% {
+    background-image: conic-gradient(transparent 33%, #a8efff, transparent 66%);
+  }
+  35% {
+    background-image: conic-gradient(transparent 35%, #a8efff, transparent 70%);
+  }
+  37% {
+    background-image: conic-gradient(transparent 37%, #a8efff, transparent 74%);
+  }
+  39% {
+    background-image: conic-gradient(transparent 39%, #a8efff, transparent 78%);
+  }
+  41% {
+    background-image: conic-gradient(transparent 41%, #a8efff, transparent 82%);
+  }
+  43% {
+    background-image: conic-gradient(transparent 43%, #a8efff, transparent 86%);
+  }
+  45% {
+    background-image: conic-gradient(transparent 45%, #a8efff, transparent 90%);
+  }
+  47% {
+    background-image: conic-gradient(transparent 47%, #a8efff, transparent 94%);
+  }
+  49% {
+    background-image: conic-gradient(transparent 49%, #a8efff, transparent 98%);
+  }
+  51% {
+    background-image: conic-gradient(transparent 51%, #a8efff, transparent 102%);
+  }
+  53% {
+    background-image: conic-gradient(transparent 53%, #a8efff, transparent 106%);
+  }
+  55% {
+    background-image: conic-gradient(transparent 55%, #a8efff, transparent 110%);
+  }
+  57% {
+    background-image: conic-gradient(transparent 57%, #a8efff, transparent 114%);
+  }
+  59% {
+    background-image: conic-gradient(transparent 59%, #a8efff, transparent 118%);
+  }
+  61% {
+    background-image: conic-gradient(transparent 61%, #a8efff, transparent 122%);
+  }
+  63% {
+    background-image: conic-gradient(transparent 63%, #a8efff, transparent 126%);
+  }
+  65% {
+    background-image: conic-gradient(transparent 65%, #a8efff, transparent 130%);
+  }
+  67% {
+    background-image: conic-gradient(transparent 67%, #a8efff, transparent 134%);
+  }
+  69% {
+    background-image: conic-gradient(transparent 69%, #a8efff, transparent 138%);
+  }
+  71% {
+    background-image: conic-gradient(transparent 71%, #a8efff, transparent 142%);
+  }
+  73% {
+    background-image: conic-gradient(transparent 73%, #a8efff, transparent 146%);
+  }
+  75% {
+    background-image: conic-gradient(transparent 75%, #a8efff, transparent 150%);
+  }
+  77% {
+    background-image: conic-gradient(transparent 77%, #a8efff, transparent 154%);
+  }
+  79% {
+    background-image: conic-gradient(transparent 79%, #a8efff, transparent 158%);
+  }
+  81% {
+    background-image: conic-gradient(transparent 81%, #a8efff, transparent 162%);
+  }
+  83% {
+    background-image: conic-gradient(transparent 83%, #a8efff, transparent 166%);
+  }
+  85% {
+    background-image: conic-gradient(transparent 85%, #a8efff, transparent 170%);
+  }
+  87% {
+    background-image: conic-gradient(transparent 87%, #a8efff, transparent 174%);
+  }
+  89% {
+    background-image: conic-gradient(transparent 89%, #a8efff, transparent 178%);
+  }
+  91% {
+    background-image: conic-gradient(transparent 91%, #a8efff, transparent 182%);
+  }
+  93% {
+    background-image: conic-gradient(transparent 93%, #a8efff, transparent 186%);
+  }
+  95% {
+    background-image: conic-gradient(transparent 95%, #a8efff, transparent 190%);
+  }
+  97% {
+    background-image: conic-gradient(transparent 97%, #a8efff, transparent 194%);
+  }
+  99% {
+    background-image: conic-gradient(transparent 99%, #a8efff, transparent 198%);
+  }
+}
