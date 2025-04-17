@@ -12,6 +12,5 @@ cd \users\ **username**
 
 cd \docu*
 
-lessc test2.less test2.css
-
+lessc test2.less test2.css\n
       **input** **output** 
