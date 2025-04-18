@@ -1,0 +1,93 @@
+<!-- HTML 程式碼-->
+<div class="wrapper">
+  <div class="rotating-box"></div>
+  <div class="text">
+    <div class="main">11124235</div>
+    <div class="sub">吳易軒</div>
+  </div>
+</div>
+
+
+<!-- CSS 程式碼 -->
+<style>
+.wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.rotating-box {
+  width: 100%;
+  height: 100%;
+  background: #f69;
+  clip-path: polygon(0% 100%,0% 0%,100% 0%,100% 100%);
+  animation: rotateBackAndForth 4s infinite ease-in-out;
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.main {
+  font-size: 45px;
+}
+
+.sub {
+  font-size: 20px;
+  margin-top: 8px;
+  animation: sway 2s infinite ease-in-out;
+}
+
+/* 旋轉動畫 */
+@keyframes rotateBackAndForth {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 微微左右擺動動畫 */
+@keyframes sway {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+
+
+  /* 淺粉色背景 */
+ /* 八邊形形狀 */
+
+
+  /* 橘色背景 */
+ /* 六角星形或鏡像六角形 */
+
+
+  /* 深藍背景 */
+ /* 長方形（四邊形） */
+
+
+  /* 青藍色背景 */
+ /* 菱形或對稱花瓣形 */
+
+
+  /* 深綠色背景 */
+ /* 五角形狀、上尖下寬型 */
+
+
+  /* 深紅色背景 */
+ /* 三角形（底邊朝上）或尖角造型 */</style>

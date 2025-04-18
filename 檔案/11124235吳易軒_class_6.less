@@ -1,0 +1,40 @@
+div {
+  position: relative;
+  width: 600px;
+  height: 499px;
+  background: url(duck72.jpg) no-repeat;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(dog72.jpg);
+    background-size: cover;
+    animation: maskUpwards 3.2s infinite alternate;
+    mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 3%, black 6%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0,0,0,0.5) 3%, black 6%);
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+}
+
+@keyframes maskUpwards {
+  each(range(0%, 100%, 2), {
+    @{value} {
+      mask-image: linear-gradient(to top,
+        transparent @value,
+        rgba(0,0,0,0.5) (@value + 3),
+        black (@value + 6)
+      );
+      -webkit-mask-image: linear-gradient(to top,
+        transparent @value,
+        rgba(0,0,0,0.5) (@value + 3),
+        black (@value + 6)
+      );
+    }
+  });
+}

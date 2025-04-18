@@ -1,0 +1,49 @@
+<img class="masked"id="masked" src="bat72.jpg" alt="masked">
+<div>11124235吳易軒</div>
+<style>
+	.masked {
+		width: 500px;
+		height: 500px;
+		mask-image: url("mouse.png");
+		/* 使用 mask-1.png 作為遮罩圖形 */
+		
+		mask-size: cover;
+		/* 遮罩圖形覆蓋整張圖片 */
+		
+	}
+	.masked-1 {
+		width: 500px;
+		height: 500px;
+		
+		mask: linear-gradient(135deg, transparent var(--p1), #fff 0) top left;
+		/* 使用線性漸層遮罩，根據 --p1 改變透明起始位置 */
+		
+		mask-size: 80% 80%;
+		/* 遮罩大小為圖片的 80% */
+		
+		mask-repeat: no-repeat;
+		/* 遮罩只使用一次，不重複 */
+		
+		transform: rotate(180deg);
+		/* 讓圖片本身先旋轉 180 度（上下顛倒） */
+		
+		animation: 1s linear infinite a2;
+		/* 套用 a2 遮罩變化動畫，每秒變化一次，無限循環 */
+	}
+	@property --p1 {
+		syntax: "<length>";           /* 宣告變數的資料型態是長度值（如 px） */
+		inherits: true;               /* 可以被繼承 */
+		initial-value: 40px;          /* 初始值為 40px */
+		}
+		@keyframes a2 {
+		0% {
+			--p1: 20px;
+		}
+		100% {
+			--p1: 80px;
+		}
+	}
+	
+	
+	
+</style>

@@ -1,0 +1,42 @@
+<div> </div>
+<style>
+div {
+    mask: 
+        linear-gradient(#000, #000 10px, #ff00 10px, #ff00 calc(100% - 10px), #000 calc(100% - 10px), #000),
+        linear-gradient(90deg, #000, #000 10px, #ff00 10px, #ff55, #ff00 calc(100% - 10px), #000 calc(100% - 10px), #000);
+}
+div {
+    position: relative;
+    width: 300px;
+    height: 240px;
+    background: #ddd; /* 灰色背景，供遮罩測試用 */
+    overflow: hidden; /* 隱藏超出邊界的內容 */
+    
+    &::after {
+        content: '';              /* 偽元素內容為空 */
+        position: absolute;
+        left: -70%;               /* 偽元素起點位置超出左上角 */
+        top: -80%;
+        width: 200%;              /* 偽元素大小超過原 div */
+        height: 200%;
+        background: conic-gradient(
+				#0ff 0%,
+				#0ff 50%,
+				#f00 50%,
+				#f00 100%
+			);
+        );
+    }
+}
+div {
+    &::after {
+        animation: rotate 4s linear infinite;
+    }
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);/* 旋轉一整圈 */
+	}
+}
+</style>

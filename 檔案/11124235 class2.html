@@ -1,0 +1,56 @@
+<!-- HTML 程式碼-->
+
+<div class="b">
+  <svg viewBox="0 0 300 300"><path fill="none" stroke="#000" stroke-width="2" d="M150,50 A100,100 0 1,1 149.9,50Z"/></svg>
+  <div class="circle"></div>
+</div>
+<div>11124235吳易軒</div>
+<!-- CSS 程式碼 -->
+<style>
+  div {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 10px -100px 10px 10px;
+  }
+div div {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  float: none;
+  offset-path: path("m22 21l116.5 116.5z");  /* 元素沿著這段直線路徑運動 */
+  border-width: 50px 30px 50px 30px;         /* 製造箭頭效果的邊框樣式 */
+  border-color: #ff00ff #0000ff #f00f #00ff; /* 四邊不同顏色 */
+  border-style: solid;
+  animation: oxxo 2s infinite linear;        /* 沿著 offset 路徑跑動畫 */
+}
+
+    .b .circle {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    float: none;
+    offset-path: path("M150,50 A100,100 0 1,1 149.9,50Z"); /* 圓形軌道動畫 */
+    border-width: 30px 30px 30px 30px;
+    border-color: #f0f0 #fff0 #0f0f #0f0f;
+    border-style: solid;
+	animation: oxxo 2s infinite linear
+  }
+
+
+	.b div {
+  offset-rotate: auto 270deg;
+  transform-origin: 25px 9px; /* 調整旋轉中心到箭頭底部中心 */
+}
+
+	@keyframes oxxo{
+		0% {offset-distance:0%;}
+		100% {offset-distance:100%;}
+	}
+
+</style>
